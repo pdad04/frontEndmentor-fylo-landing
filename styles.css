@@ -7,7 +7,7 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 h1,
@@ -80,21 +80,94 @@ p {
     background-position: bottom;
 }
 
+.btn {
+    display: inline-block;
+    background-color: hsl(198, 60%, 50%);
+    color:hsl(0, 0%, 100%);
+    border-radius: 25px;
+    padding: 1em 5em; 
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+
+.hero__button {
+    margin-top: 2em;
+}
+
 .main-content {
     background-color: hsl(218, 28%, 13%);
     color: hsl(0, 0%, 100%);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-top: 5em;
+}
+
+.details__item {
+    width: 100%;
+    padding: 5em 0;
+    text-align: center;
+}
+
+.demo {
+    padding-top: 5em;
+    padding-bottom: 10em;
+}
+
+.demo h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.demo a {
+    display: inline-block;
+    position: relative;
+    margin-top: 1em;
+    color: hsl(176,68%, 64%);
+}
+
+.demo a::before {
+    position: absolute;
+    content: '';
+    top: 1.75rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 10.5rem;
+    background-color: hsl(176,68%, 64%);
+}
+
+.demo a::after{
+    position: absolute;
+    content: url(images/icon-arrow.svg);
+    top: 0.15rem;
+    right: -1.5em;
+}
+
+.testimonials {
+    position: relative;
+    margin-bottom: 10em;
+}
+
+.testimonials::before {
+    position: absolute;
+    content: url(/images/bg-quotes.png);
+    top: -2.5rem;
+    left: 0;
 }
 
 .testimonials__item {
     background-color: hsl(219,30%,18%);
-    padding: 1em;
+    margin-block: 2em;
+    padding: 2em;
     border-radius: 0.25rem;
 }
+
 
 .testimonials__item__person {
     display: flex;
     gap: 1em;
+    margin-top: 2em;
 }
+
 .testimonials__item__person img{
     height:2.5rem;
     width: 2.5rem;
@@ -103,18 +176,47 @@ p {
 
 .testimonials__item__person h3 {
     display: inline;
+    font-size: 0.95rem;
+}
+
+.testimonials__item__person p {
+    font-size: 0.75rem;
 }
 
 .early-access {
-    background-color: hsl(219,30%,18%);
+    background-color: hsl(217, 28%, 15%);
     padding: 3em;
     margin: 0 1em;
+    text-align: center;
     border-radius: 0.5rem;
 }
+
+.early-access__btn {
+    font-size: 0.95rem;
+}
+
+.early-access h2 {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+input[type=text]{
+    border: none;
+    width: 100%;
+    margin: 1em 0;
+    padding: 1em 2em;
+    border-radius: 5rem;
+}
+
+input::placeholder {
+    color: hsl(0, 4%, 73%);
+}
+
 
 .site-footer {
     background-color: hsl(216,53%, 9%);
     color: hsl(0, 0%, 100%);
+    padding-top: 5em;
 }
 
 .site-footer__info__contact {
@@ -126,13 +228,13 @@ p {
 .site-footer__info__contact__phone,
 .site-footer__info__contact__email {
     position: relative;
-    padding: 1.5rem;
+    padding: 1.25rem;
 }
 
 .site-footer__info__contact__address::before {
     position: absolute;
     content:url("/images/icon-location.svg");
-    top: 2rem;
+    top: 1.75rem;
     left: -2.5rem;
     margin-left: 2rem;
 }
@@ -140,7 +242,7 @@ p {
 .site-footer__info__contact__phone::before {
     position: absolute;
     content:url("/images/icon-phone.svg");
-    top: 2rem;
+    top: 1.2rem;
     left: -2.5rem;
     margin-left: 2rem;
 }
@@ -148,7 +250,7 @@ p {
 .site-footer__info__contact__email::before {
     position: absolute;
     content:url("/images/icon-email.svg");
-    top: 2rem;
+    top: 1.4rem;
     left: -2.5rem;
     margin-left: 2rem;
 }
@@ -156,6 +258,11 @@ p {
 .site-footer__info__links {
     display: flex;
     flex-direction: column;
+    gap: 2em;
+}
+
+.site-footer__info__links__items li {
+    margin-top: 1em;
 }
 
 .site-footer__info__social {
